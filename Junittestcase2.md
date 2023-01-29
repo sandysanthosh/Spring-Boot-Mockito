@@ -2,7 +2,7 @@
 
 #### Test case 2 referer program:
 
-````
+```
 import java.util.ArrayList;  
 import java.util.List;  
 import org.springframework.beans.factory.annotation.Autowired;  
@@ -45,7 +45,7 @@ booksRepository.save(books);
 }  
 
 
-````
+```
 
 
 #### junit test case program:
@@ -126,4 +126,9 @@ public class BooksServiceTest {
 ```
 
 
+###### This test class uses the @Mock annotation to create a mock object for the BooksRepository. The @InjectMocks annotation is used to create an instance of the BooksService and inject the mock repository into it.
+
+###### The test methods use the when() method of the mock repository to specify the behavior of the findAll(), findById(), and save() methods. The test methods then call the corresponding methods of the service and use assertEquals() to check that the service returns the expected results.
+
+###### It is also important to note that this is a basic junit test case, in real world scenario you'll have to test all the possible edge cases, and test the methods under different scenarios.
 
